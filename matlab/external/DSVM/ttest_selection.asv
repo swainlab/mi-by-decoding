@@ -1,0 +1,21 @@
+function [ind]=ttest_selection(features,labels,B)
+%This function allows to choose, using ttest procedure, B revelant features
+%Input: 
+%features: N by M ma
+%
+%
+class=unique(labels);
+[~,n]=size(features);
+comb=nchoosek(class,2); 
+for j=1:n
+   for m=1: length(comb)
+    ind=comb(m,:);
+score(j,:)=ttest2(features(labels==ind(1),:),features(labels==ind(2),:),seuil);
+   end
+end
+for k=1:n
+    rg(k)=sum(score(:,k));
+end
+[~,ind]=sort(rg,'descend');
+best_feat=ind(1:B);
+end
