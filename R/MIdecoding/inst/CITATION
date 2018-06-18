@@ -1,0 +1,9 @@
+ref <- bibentry(
+  bibtype='Article',
+  author=paste('Granados, Alejandro A and Pietsch, Julian M J and',
+               'Cepeda-Humerez, Sarah A and Farquhar, Iseabail L and',
+               'Tka\v{c}ik, Ga\v{s}per and Swain, Peter S'),
+  title='Distributed and dynamic intracellular organization of extracellular information',
+  year=2018,
+  journal='Proc Natl Acad Sci U S A',
+  doi='10.1073/pnas.1716659115')

@@ -1,0 +1,23 @@
+Functions for estimating mutual information (MI) by decoding
+
+Copyright (C) 2018 Gasper Tkacik and Peter Swain
+
+If you publish results that make use this software or the mutual information
+by decoding algorithm, please cite:
+Granados, A. A., Pietsch, J. M. J., Cepeda-Humerez, S. A., Farquhar, I. L.,
+Tkacik, G., and Swain, P. S. (2018) Distributed and dynamic intracellular
+organization of extracellular information. Proc Natl Acad Sci U S A.
+https://dx.doi.org/10.1073/pnas.1716659115
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

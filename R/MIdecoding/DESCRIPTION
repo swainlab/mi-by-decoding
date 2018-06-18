@@ -1,0 +1,20 @@
+Package: MIdecoding
+Version: 1.0-1
+Date: 2018-06-04
+Title: Estimating Mutual Information by Decoding
+Authors@R: c(person("Julian", "Pietsch", role=c("aut","trl","cre"),
+                    email="julian.pietsch@ed.ac.uk"),
+             person("Alejandro", "Granados", role="aut"),
+             person("Sarah", "Cepeda", role="aut"),
+             person("Gasper", "Tkacik", role=c("aut","cph")),
+             person("Peter", "Swain", role=c("aut","cph")))
+Depends: R (>= 3.3.0)
+Suggests: randomForest, xgboost
+Imports: e1071, parallel, abind
+Description: Implements methods for estimating mutual information by decoding
+  as described in Granados, A. A., Pietsch, J. M. J., Cepeda-Humerez, S. A.,
+  Farquhar, I. L., Tkacik, G., and Swain, P. S. (2018) Distributed and dynamic
+  intracellular organization of extracellular information. Proc Natl Acad Sci
+  U S A. <https://dx.doi.org/10.1073/pnas.1716659115>.
+License: LGPL-3 + file LICENCE
+LazyLoad: yes

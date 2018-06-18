@@ -7,7 +7,8 @@ function I = Info(M)
 %   information by decoding algorithm, please cite:
 %   Granados, A.A., Pietsch, J.M.J., Cepeda-Humerez, S.A., Farquhar, I.L.,
 %   Tkacik, G., and Swain, P.S. (2018) Distributed and dynamic
-%   intracellular organization of extracellular information.
+%   intracellular organization of extracellular information. PNAS.
+%   https://dx.doi.org/10.1073/pnas.1716659115
 %
 %   Authors: Sarah Cepeda, Julian Pietsch
 %   Copyright Gasper Tkacik and Peter Swain 2018

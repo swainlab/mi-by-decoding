@@ -1,0 +1,7 @@
+Sarah Cepeda, under the supervision of Gasper Tkacik, wrote the original
+Matlab version of the mutual information by decoding algorithm.
+
+Alejandro Granados and Julian Pietsch, under the supervision of Peter Swain,
+made modifications and additions to the Matlab code.
+
+Julian Pietsch translated the algorithm into R.

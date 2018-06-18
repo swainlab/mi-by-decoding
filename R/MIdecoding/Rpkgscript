@@ -1,0 +1,82 @@
+#!/bin/sh
+
+if [[ "$#" -lt 1 || "$#" -gt 3 ]]
+then
+  echo "Usage: takes at least one argument:"
+  echo "         1. action to take: either 'build', 'doc', 'check' or 'install'"
+  echo "         2. the package directory (defaults to current dir)"
+  echo "         3. the package name (defaults to name of current dir)"
+  exit 1
+fi
+
+if [[ "$#" -ge 2 ]]
+then
+  PKGDIR=$2
+else
+  PKGDIR=`pwd`
+fi
+
+BUILDDIR=$PKGDIR/build
+
+if [[ "$#" -eq 3 ]]
+then
+  PKGNAME=$3
+else
+  PKGNAME=`basename ${PKGDIR}`
+fi
+
+if [ "$1" = "build" ]
+then
+  cd $BUILDDIR
+  R CMD build $PKGDIR
+  if [ $? -ne 0 ]
+  then
+    echo "R CMD build error."
+    exit 1
+  else
+    exit 0
+  fi
+fi
+
+if [ "$1" = "doc" ]
+then
+  cd $BUILDDIR
+  R CMD Rd2pdf -o $BUILDDIR/${PKGNAME}.pdf --force $PKGDIR
+  if [ $? -ne 0 ]
+  then
+    echo "R CMD build error."
+    exit 1
+  else
+    exit 0
+  fi
+fi
+
+if [ "$1" = "check" ]
+then
+  TARFILE=`ls ${BUILDDIR}/${PKGNAME}_*.tar.gz | tail -n1`
+  cd $BUILDDIR
+  R CMD check $TARFILE
+  if [ $? -ne 0 ]
+  then
+    echo "R CMD check error."
+    exit 1
+  else
+    exit 0
+  fi
+fi
+
+if [ "$1" = "install" ]
+then
+  TARFILE=`ls ${BUILDDIR}/${PKGNAME}_*.tar.gz | tail -n1`
+  R CMD install $TARFILE
+  if [ $? -ne 0 ]
+  then
+    echo "R CMD install error."
+    exit 1
+  else
+    exit 0
+  fi
+fi
+
+echo "Unknown command '$1' specified."
+exit 1
