@@ -6,7 +6,7 @@ These scripts implement the mutual information estimation algorithm as described
 
 The Matlab and R directories contain README files with more specific details on how to use the functions, and also contain example scripts demonstrating use of the functions.
 
-Example data suitable for use with these functions can be found at [http://dx.doi.org/10.7488/ds/2214][]
+Example data suitable for use with these functions can be found at http://dx.doi.org/10.7488/ds/2214.
 
 If you publish results that make use this software or the mutual information by decoding algorithm, please cite:
 
