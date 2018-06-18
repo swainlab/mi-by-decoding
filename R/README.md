@@ -11,9 +11,9 @@ from this directory either:
    `install.packages('release/MIdecoding_1.0-1.tar.gz')`, or
 2. install from source by opening a terminal window, and then running the
    commands:
-   ```R
-   R CMD build MIdecoding
-   R CMD install MIdecoding_1.0-1.tar.gz
+   ```bash
+   > R CMD build MIdecoding
+   > R CMD install MIdecoding_1.0-1.tar.gz
    ```
 
 Then in order to use the library in your R session, you need to load it by
